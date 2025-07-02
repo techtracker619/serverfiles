@@ -36,7 +36,8 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 - Read
 - Modify
 - Full Control
-![imagealt](
+![imagealt](https://github.com/techtracker619/serverfiles/blob/2a0be2f83b369acda0295b43608521d00ddc4408/screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_36_51.png)
+
 
 ---
 
