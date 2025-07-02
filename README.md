@@ -21,8 +21,8 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 2. Navigate to `C:\` or `D:\`
 3. Create a folder:
 
-📸 Screenshot:  
-![Folder Created](./screenshots/01-folder-created.png)
+![imagealt](https://github.com/techtracker619/serverfiles/blob/b2ed30ff913c89793a1a5eabddcb5896c415fecf/screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_23_28.png)
+
 
 ---
 
