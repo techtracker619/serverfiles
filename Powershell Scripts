@@ -1,0 +1,41 @@
+<#
+.SYNOPSIS
+    Creates shared folders and applies NTFS and share-level permissions
+
+.AUTHOR
+    Anthony Jenkins
+#>
+
+# --- Variables ---
+$SharePath = "C:\Shares"
+$HRFolder = "$SharePath\HR"
+$ITFolder = "$SharePath\IT"
+
+# --- Create Folder Structure ---
+New-Item -Path $HRFolder -ItemType Directory -Force
+New-Item -Path $ITFolder -ItemType Directory -Force
+
+# --- Create Security Groups (if needed) ---
+if (-not (Get-ADGroup -Filter { Name -eq "HR_Team" })) {
+    New-ADGroup -Name "HR_Team" -GroupScope Global -GroupCategory Security -Path "OU=HR,DC=bytecorp,DC=local"
+}
+
+if (-not (Get-ADGroup -Filter { Name -eq "IT_Admins" })) {
+    New-ADGroup -Name "IT_Admins" -GroupScope Global -GroupCategory Security -Path "OU=IT,DC=bytecorp,DC=local"
+}
+
+# --- Set NTFS Permissions ---
+# Give Full Control to respective groups only
+$AclHR = Get-Acl -Path $HRFolder
+$RuleHR = New-Object System.Security.AccessControl.FileSystemAccessRule("HR_Team","FullControl","ContainerInherit,ObjectInherit","None","Allow")
+$AclHR.SetAccessRule($RuleHR)
+Set-Acl -Path $HRFolder -AclObject $AclHR
+
+$AclIT = Get-Acl -Path $ITFolder
+$RuleIT = New-Object System.Security.AccessControl.FileSystemAccessRule("IT_Admins","FullControl","ContainerInherit,ObjectInherit","None","Allow")
+$AclIT.SetAccessRule($RuleIT)
+Set-Acl -Path $ITFolder -AclObject $AclIT
+
+# --- Share the Folders ---
+New-SmbShare -Name "HR" -Path $HRFolder -FullAccess "HR_Team"
+New-SmbShare -Name "IT" -Path $ITFolder -FullAccess "IT_Admins"
