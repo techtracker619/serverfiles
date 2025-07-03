@@ -50,6 +50,7 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 5. Click **Permissions**
 6. Grant share-level permissions
 
+![imagealt](https://github.com/techtracker619/serverfiles/blob/19f28ed70122a21cc2d1f95bc263bf75bd6b6abb/screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_31_43.png)
 
 
 ---
