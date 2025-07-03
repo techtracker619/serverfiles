@@ -50,15 +50,69 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 5. Click **Permissions**
 6. Grant share-level permissions
 
-📸 Screenshots:  
-- ![Share Tab](./screenshots/03-share-tab-settings.png)  
-- ![Share Permissions](./screenshots/04-share-permissions.png)
+
+
+---
+### 🔐 Step 2: Open Advanced Sharing
+
+- Right-click on `Shared Folder` > **Properties**
+- Go to the **Sharing** tab
+- Click **Advanced Sharing...**
+
+📸 Screenshot:  
+![Advanced Sharing](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_50_58.png)
 
 ---
 
-### 💻 Step 4: Access the Share Remotely
+### 🚫 Step 3: Remove Default "Everyone" Group
 
-On a client machine, press `Windows + R` and enter:
+- In the Permissions window, you’ll see `Everyone` listed
+- Click on it and select **Remove**
 
-```cmd
-\\SERVER-NAME\SharedDocs
+📸 Screenshot:  
+![Removing Everyone](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_52_25.png)
+
+🧠 *Why: Removing "Everyone" enhances security by limiting access only to specified users or groups.*
+
+---
+
+### 👥 Step 4: Add a Specific Group (e.g., IT-Admins)
+
+- Click **Add...**
+- Type `IT-Admins` (or your desired AD group)
+- Click **Check Names** and then **OK**
+
+📸 Screenshot:  
+![Add Group](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_53_06.png)
+
+---
+
+### 🎛️ Step 5: Set Share Permissions
+
+- With `IT-Admins` selected, check the box for:
+  - ✅ **Full Control**
+  - OR ✅ **Change** if you want limited access
+- Click **Apply** and **OK**
+
+📸 Screenshot:  
+![Set Share Permissions](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_54_20.png)
+
+💡 *Share permissions allow control of access over the network.*
+
+---
+
+### 🧱 Step 6: Set NTFS Permissions (Security Tab)
+
+- Go back to **Properties** > **Security** tab
+- Click **Edit > Add** and select the same group (`IT-Admins`)
+- Assign NTFS permissions:
+  - ✅ Modify
+  - ✅ Read & Execute
+  - ✅ Write
+- Click **Apply** and **OK**
+
+📸 Screenshot:  
+![NTFS Permissions](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_38_45.png)
+
+🧠 *Remember: Effective permissions = the most restrictive between NTFS and Share permissions.*
+
