@@ -137,4 +137,14 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 Anthony Jenkins  
 *Follow for more labs on AD, Cybersecurity, and Systems Administration*
 
+<!-- 📚 Byte Library Section -->
+<h3>📚 Byte Library</h3>
+<p>
+  Explore free IT & Cybersecurity resources, labs, and articles built for beginners and career switchers.
+  <br />
+  👉 <a href="https://byte-library.com/" target="_blank" style="text-decoration: none; font-weight: bold;">
+    Visit Byte Library
+  </a>
+</p>
+
 
