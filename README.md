@@ -13,7 +13,8 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 
 ---
 
-## 🪜 Step-by-Step Guide
+## ▶️ Step-by-Step Guide
+
 
 ### ✅ Step 1: Create a Shared Folder
 
