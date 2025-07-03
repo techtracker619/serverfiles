@@ -116,3 +116,23 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 
 🧠 *Remember: Effective permissions = the most restrictive between NTFS and Share permissions.*
 
+
+---
+
+## 🛠️ Key Skills Practiced
+
+- Shared folder creation using Windows GUI
+- NTFS permission configuration for granular security
+- Share permissions setup via Advanced Sharing
+- Managing group-level access using Active Directory users/groups
+- Understanding interaction between NTFS and Share permissions
+- Secure access over local network using UNC path
+- Practical Windows Server file system administration
+
+---
+
+🤝 **Author**  
+Anthony Jenkins  
+*Follow for more labs on AD, Cybersecurity, and Systems Administration*
+
+
