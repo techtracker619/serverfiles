@@ -71,7 +71,7 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 - In the Permissions window, you’ll see `Everyone` listed
 - Click on it and select **Remove**
 
-📸 Screenshot:  
+
 ![Removing Everyone](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_52_25.png)
 
 🧠 *Why: Removing "Everyone" enhances security by limiting access only to specified users or groups.*
@@ -84,7 +84,7 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
 - Type `IT-Admins` (or your desired AD group)
 - Click **Check Names** and then **OK**
 
-📸 Screenshot:  
+
 ![Add Group](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_53_06.png)
 
 ---
@@ -96,7 +96,7 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
   - OR ✅ **Change** if you want limited access
 - Click **Apply** and **OK**
 
-📸 Screenshot:  
+ 
 ![Set Share Permissions](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_54_20.png)
 
 💡 *Share permissions allow control of access over the network.*
@@ -113,7 +113,7 @@ Learn how to securely share a folder using NTFS and Share permissions in Windows
   - ✅ Write
 - Click **Apply** and **OK**
 
-📸 Screenshot:  
+  
 ![NTFS Permissions](./screenshots/VirtualBox_AC-DC-SERVER_27_06_2025_18_38_45.png)
 
 🧠 *Remember: Effective permissions = the most restrictive between NTFS and Share permissions.*
